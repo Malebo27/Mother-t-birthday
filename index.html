@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, Mother T.!</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <h1>🎉 Happy Birthday, Mother T.!</h1>
+    <p class="tagline">On this special day, i want to take a moment to express my gratitude for the incredible impact you had on my education and personal growth. Your leardership, dedication, and unwavering support made a lasting impression on all of us.
+        I hope this year brings you as much joy and inspiration as you have given to your students. May your day be filled wth love, laughter, and cherished momeries.
+    </p>
+    <div class="countdown">
+      <h2>Countdown to the Big Day</h2>
+      <p id="timer">Loading...</p>
+    </div>
+  </header>
+
+  <section class="gallery">
+    <h2>📸 pictures</h2>
+    <div class="photos">
+    <img src="images/cake.jpg" alt="Birthday Cake" />
+      <img src="images/principal1.jpg" alt="Principal" />
+      <img src="images/principal2.jpg" alt="Principal" />
+      <img src="images/principal3.jpg" alt="Principal" />
+      <img src="images/principal4.jpg" alt="Principal" />
+      <img src="images/principal5.jpg" alt="Principal" />
+      <img src="images/principal6.jpg" alt="Principal" />
+    </div>
+  </section>
+
+  <section class="messages">
+    <h2>💬 Message Wall</h2>
+    <form id="messageForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <textarea id="message" placeholder="Your birthday message..." required></textarea>
+      <button type="submit">Post Message</button>
+    </form>
+    <ul id="messageList"></ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 | With love from Malebo</p>
+  </footer>
+
+  <script src="script.js"></script>
+  
+  <!-- 🎵 Background Music -->
+<audio id="bg-music" autoplay loop>
+  <source src="music/happy-birthday.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- 🔘 Play/Pause Button -->
+<button onclick="toggleMusic()" id="music-btn" style="margin-top: 20px;">
+  🔈 Play Music
+</button>
+</body>
+</html>
