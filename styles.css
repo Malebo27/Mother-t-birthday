@@ -25,12 +25,15 @@ body {
 
 .countdown {
   margin-top: 30px;
+  color: rgba(252, 11, 132, 0.921); /* or use #ff69b4 */
 }
 
 #timer {
   font-size: 2rem;
   font-weight: bold;
+  color: rgb(105, 248, 255); /* or use #ff69b4 */
 }
+
 
 /* 📸 GALLERY SECTION */
 .gallery {
@@ -249,11 +252,11 @@ footer {
   padding: 6px 10px;
   font-size: 0.9rem;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  background-color: rgba(235, 14, 154, 0.921); /* semi-transparent black */
   border-radius: 8px;
   text-align: center;
   max-width: 160px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(235, 8, 182, 0.964);
 }
 
 body {
@@ -360,6 +363,48 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.share {
+  padding: 40px 20px;
+  text-align: center;
+  background: #ffe6f0;
+}
+
+.share h2 {
+  margin-bottom: 20px;
+  color: #d63384;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.share-buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: rgb(248, 20, 202);
+  transition: background 0.3s ease;
+}
+
+.share-buttons .whatsapp {
+  background-color: #0af1e9;
+}
+
+.share-buttons .facebook {
+  background-color: #3b5998;
+}
+
+.share-buttons .twitter {
+  background-color: #1DA1F2;
+}
+
+.share-buttons a:hover {
+  opacity: 0.8;
+}
 
 
 
