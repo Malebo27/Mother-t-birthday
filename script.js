@@ -22,37 +22,7 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Message Wall with Local Storage
-const messageForm = document.getElementById("messageForm");
-const messageList = document.getElementById("messageList");
-
-function loadMessages() {
-  const messages = JSON.parse(localStorage.getItem("birthdayMessages")) || [];
-  messageList.innerHTML = "";
-  messages.forEach(msg => {
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${msg.name}:</strong> ${msg.text}`;
-    messageList.appendChild(li);
-  });
-}
-
-messageForm.addEventListener("submit", e => {
-  e.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const text = document.getElementById("message").value.trim();
-
-  if (!name || !text) return;
-
-  const messages = JSON.parse(localStorage.getItem("birthdayMessages")) || [];
-  messages.push({ name, text });
-  localStorage.setItem("birthdayMessages", JSON.stringify(messages));
-
-  messageForm.reset();
-  loadMessages();
-});
-
-loadMessages();
-
+// Toggle background music play/pause
 function toggleMusic() {
   const audio = document.getElementById("bg-music");
   const btn = document.getElementById("music-btn");
@@ -66,3 +36,47 @@ function toggleMusic() {
   }
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  const slideshow = document.getElementById('slideshow');
+  const images = [
+    'images/cake.jpg',
+    'images/principal1.jpg',
+    'images/principal2.jpg',
+    'images/principal3.jpg',
+    'images/principal4.jpg',
+    'images/principal5.jpg',
+    'images/principal6.jpg'
+  ];
+
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    slideshow.style.opacity = 0;
+
+    setTimeout(() => {
+      slideshow.src = images[index];
+      slideshow.style.opacity = 1;
+    }, 500);
+  }, 3000);
+});
+
+// Lightbox Gallery Script
+document.querySelectorAll('.lightbox').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+
+    const img = document.createElement('img');
+    img.src = this.href;
+
+    overlay.appendChild(img);
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', () => {
+      overlay.remove();
+    });
+  });
+});

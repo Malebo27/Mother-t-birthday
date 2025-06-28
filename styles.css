@@ -32,79 +32,335 @@ body {
   font-weight: bold;
 }
 
+/* 📸 GALLERY SECTION */
 .gallery {
   padding: 40px 20px;
   text-align: center;
 }
 
 .photos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  justify-content: center;
+  justify-items: center;
+}
+
+.photos figure {
+  margin: 0;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.photos figure:hover {
+  transform: scale(1.03);
+  background: #fff5ee;
 }
 
 .photos img {
-  width: 250px;
+  width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
 }
 
-.messages {
-  padding: 40px 20px;
-  background: #fff3e6;
-}
-
-.messages form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-form input, form textarea {
-  width: 90%;
-  max-width: 400px;
-  padding: 10px;
+.photos figcaption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #444;
+  background: #ffe6cc;
+  padding: 5px 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
 }
 
-form button {
+/* 🔊 MUSIC BUTTON */
+#music-btn {
+  display: block;
+  margin: 30px auto;
   padding: 10px 20px;
-  background: #ff7e5f;
+  background: #feb47b;
   color: white;
   border: none;
   border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-form button:hover {
-  background: #ff3e3e;
+#music-btn:hover {
+  background: #ff7e5f;
 }
 
-#messageList {
-  margin-top: 20px;
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#messageList li {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-left: 5px solid #ff7e5f;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
+/* 👣 FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   background: #222;
   color: white;
 }
+#music-btn {
+  background-color: #6a5acd; /* Slate Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+#music-btn:hover {
+  background-color: #483d8b; /* Darker shade on hover */
+}
+
+
+.birthday-message {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#animated-message {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d63384; /* A festive pink */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid orange;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.fade-in-quote {
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in 4s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slideshow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.slide-image:hover {
+  transform: scale(1.05);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #fff;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+  max-width: 150px;
+}
+
+.caption {
+  margin-top: 8px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  border-radius: 8px;
+  text-align: center;
+  max-width: 160px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+body {
+  background: linear-gradient(135deg, #ffe0ec, #ffe5b4, #d0f4de);
+}
+
+.surprise-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.surprise-button {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.surprise-button:hover {
+  transform: scale(1.1);
+  background-color: #ff1493;
+}
+
+.party-mode {
+  background: radial-gradient(circle, #ffe0f0, #ffe599, #b3ffd9);
+  animation: colorPulse 3s infinite;
+}
+
+@keyframes colorPulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#surprise-btn {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+#surprise-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px pink;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.floating-emoji {
+  position: fixed;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: floatUp 5s linear forwards;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+.qr-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 30px;
+  background-color: #fff3e6;
+}
+
+.qr-section h2 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.qr-img {
+  width: 200px;
+  margin: 15px auto;
+  border: 2px dashed #ff7e5f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+
+

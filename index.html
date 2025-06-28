@@ -6,57 +6,199 @@
   <title>Happy Birthday, Mother T.!</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+
+    <div class="birthday-message">
+  <h1 id="animated-message"></h1>
+  <p id="quote-message" class="fade-in-quote"></p>
+</div>
+
+<script>
+  const message = "Happy Birthday, Mother T! 🎉🎂";
+  const quote = "“Your leadership has shaped lives — today, we celebrate you.” 💐";
+
+  const messageElement = document.getElementById("animated-message");
+  const quoteElement = document.getElementById("quote-message");
+
+  messageElement.innerText = message;
+
+  // Show the quote after typing animation finishes (4 seconds)
+  setTimeout(() => {
+    quoteElement.innerText = quote;
+  }, 4000);
+</script>
 
   <header class="hero">
-    <h1>🎉 Happy Birthday, Mother T.!</h1>
-    <p class="tagline">On this special day, i want to take a moment to express my gratitude for the incredible impact you had on my education and personal growth. Your leardership, dedication, and unwavering support made a lasting impression on all of us.
-        I hope this year brings you as much joy and inspiration as you have given to your students. May your day be filled wth love, laughter, and cherished momeries.
+    <p class="tagline">
+      On this special day, I want to take a moment to express my gratitude for the incredible impact you had on my education and personal growth. Your leadership, dedication, and unwavering support made a lasting impression on all of us.❤️‍🩹🤩
+      I hope this year brings you as much joy and inspiration as you have given to your students. May your day be filled with love, laughter, and cherished memories.🦋❤
     </p>
     <div class="countdown">
-      <h2>Countdown to the Big Day</h2>
+      <h2>Countdown to the Big Day!!!😜😘</h2>
       <p id="timer">Loading...</p>
     </div>
   </header>
 
-  <section class="gallery">
-    <h2>📸 pictures</h2>
-    <div class="photos">
-    <img src="images/cake.jpg" alt="Birthday Cake" />
-      <img src="images/principal1.jpg" alt="Principal" />
-      <img src="images/principal2.jpg" alt="Principal" />
-      <img src="images/principal3.jpg" alt="Principal" />
-      <img src="images/principal4.jpg" alt="Principal" />
-      <img src="images/principal5.jpg" alt="Principal" />
-      <img src="images/principal6.jpg" alt="Principal" />
+  <body>
+   <section class="gallery">
+  <h2>📸 Pictures</h2>
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <a href="images/cake.jpg" class="lightbox">
+        <img src="images/cake.jpg" alt="Cake">
+      </a>
+      <p class="caption">The Birthday Cake 🎂</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="images/principal1.jpg" class="lightbox">
+        <img src="images/principal1.jpg" alt="Madam Setwaba">
+      </a>
+      <p class="caption">Thank you, Mother T, for believing in me when i didn't believe in myself. Your kindness has shaped my journey in ways I'll always cherish.❤️‍🩹🤩</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="images/principal2.jpg" class="lightbox">
+        <img src="images/principal2.jpg" alt="Principal speech">
+      </a>
+      <p class="caption">I'll forever be grateful for your unwavering support, Mother T. Your kindness and guidance have made a lasting impact on my life.❤🥰</p>   
+    </div>
+
+    <div class="gallery-item">
+      <a href="images/principal3.jpg" class="lightbox">
+        <img src="images/principal3.jpg" alt="Madam Setwaba">
+      </a>
+      <p class="caption">Reflecting on my time at Mmanare Sec School, I can't help but smile thinking of your warm encouragement, Mother T. You truly made a difference in my life.💕🎀</p>
+      </div>
+
+      <div class="gallery-item">
+      <a href="images/principal4.jpg" class="lightbox">
+        <img src="images/principal4.jpg" alt="Madam Setwaba">
+      </a>
+      <p class="caption">Your kindness and dedication, have inspired me to be the best version of my self. Thank you for everything you've done for me!🫀❤️‍🩹</p>
+      </div>
+
+        <div class="gallery-item">
+      <a href="images/principal5.jpg" class="lightbox">
+        <img src="images/principal5.jpg" alt="Madam Setwaba">
+      </a>
+      <p class="caption">I owe so much of my growth to your compassionate leadership, Setwaba. Your kindness has left a mark on my heart that I will carry forever.🎀❤️‍🩹</p>
+      </div>
+
+        <div class="gallery-item">
+      <a href="images/principal6.jpg" class="lightbox">
+        <img src="images/principal6.jpg" alt="Madam Setwaba">
+      </a>
+      <p class="caption">Your love is my greatest gift. Thank your for being my biggest cheerleader!🦋❤️‍🩹</p>
+      </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  <section class="quotes">
+    <h2>📝 Quotes Wall</h2>
+    <div class="quote-list">
+      <p>“Your guidance has left a legacy of excellence.” 🌟</p>
+      <p>“To the most inspiring leader and role model, Happy Birthday!” 🎈</p>
+      <p>“You taught us more than just lessons — you taught us life.” ❤️</p>
     </div>
   </section>
 
-  <section class="messages">
-    <h2>💬 Message Wall</h2>
-    <form id="messageForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <textarea id="message" placeholder="Your birthday message..." required></textarea>
-      <button type="submit">Post Message</button>
-    </form>
-    <ul id="messageList"></ul>
-  </section>
+<!-- 🎁 Surprise Box -->
+<button id="surprise-btn">🎁 Tap for Surprise</button>
+
+<div id="surprise-message" style="display: none;">
+  <h2>💖 A Special Message 💖</h2>
+  <p>Happy Birthday to an Inspiring Leader!🥳🥰❤<br>
+
+  Dear Mother T., Mother to all Nations!🩷🤗
+
+Happy Birthday! On this special day, I wanted to take a moment to express my heartfelt wishes and gratitude for everything you have done, not just for me, but for our entire school community. As I reflect on my time as your PA during my senior year, I am filled with appreciation for your leadership, guidance, and unwavering support.
+
+Your dedication to fostering a positive and inclusive environment at Mmanare Sec School has made a lasting impact on all of us. You have a unique ability to inspire students and staff alike, encouraging us to strive for excellence while also reminding us of the importance of kindness and empathy. Your passion for education and commitment to our growth have not only shaped our academic experiences but have also instilled in us the values that will guide us throughout our lives.<br>
+  I fondly remember the countless moments we shared during my time as your PA. You always made me feel valued and empowered, encouraging me to share my ideas and take on challenges. Those experiences taught me so much about leadership, teamwork, and the importance of believing in oneself.
+
+As you celebrate another year of life, I hope you take a moment to reflect on the incredible impact you have made on so many students' lives. Your hard work and dedication do not go unnoticed, and I am grateful to have had the opportunity to learn from you. You have not only been a principal but also a mentor and a role model, and I aspire to carry the lessons I've learned from you into my future endeavors.
+
+May this birthday bring you as much joy as you have given to others. I hope the year ahead is filled with new adventures, personal growth, and all the happiness you deserve. Thank you for being such an inspiring leader and for making Mmanare Sec School a place where we can all thrive.
+
+Wishing you a fantastic birthday and a wonderful year ahead!🥳❤🫶🏻</p>
+</div>
+
+<section class="qr-section">
+  <h2>📱 Scan to Visit the Birthday Site</h2>
+  <img
+    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/Malebo27/Mother-t-birthday.git"
+    alt="QR Code linking to celebration site"
+    class="qr-img"
+  >
+  <p><a href="https://github.com/Malebo27/Mother-t-birthday.git" target="_blank">🔗 Open in browser</a></p>
+</section>
+
 
   <footer>
-    <p>&copy; 2025 | With love from Malebo</p>
+    <p>&copy; 2025 | With love from Malebo!🎀❤️‍🩹</p>
   </footer>
 
-  <script src="script.js"></script>
-  
   <!-- 🎵 Background Music -->
-<audio id="bg-music" autoplay loop>
-  <source src="music/happy-birthday.mp3" type="audio/mp3">
-  Your browser does not support the audio element.
-</audio>
+  <audio id="bg-music" autoplay loop>
+    <source src="music/happy-birthday.mp3.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
-<!-- 🔘 Play/Pause Button -->
-<button onclick="toggleMusic()" id="music-btn" style="margin-top: 20px;">
+  <button onclick="toggleMusic()" id="music-btn">
   🔈 Play Music
 </button>
+
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    music.volume = 0;
+    let volume = 0;
+    const fadeIn = setInterval(() => {
+      if (volume < 1) {
+        volume += 0.01;
+        music.volume = volume;
+      } else {
+        clearInterval(fadeIn);
+      }
+    }, 100);
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        button.textContent = "🔊 Pause Music";
+      } else {
+        music.pause();
+        button.textContent = "🔈 Play Music";
+      }
+    }
+  </script>
+  
+  <script>
+  const btn = document.getElementById('surprise-btn');
+  const surprise = document.getElementById('surprise-message');
+
+  btn.addEventListener('click', () => {
+    surprise.style.display = 'block';
+    startEmojiFloat();
+  });
+
+  function startEmojiFloat() {
+    for (let i = 0; i < 20; i++) {
+      const emoji = document.createElement('div');
+      emoji.classList.add('floating-emoji');
+      emoji.innerText = ['🎉', '🎈', '💐', '🎂', '💖'][Math.floor(Math.random() * 5)];
+      emoji.style.left = Math.random() * 100 + 'vw';
+      emoji.style.animationDelay = Math.random() * 3 + 's';
+      document.body.appendChild(emoji);
+    }
+  }
+</script>
 </body>
 </html>
