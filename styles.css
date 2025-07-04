@@ -350,19 +350,6 @@ body {
   background-color: #fff3e6;
 }
 
-.qr-section h2 {
-  font-size: 1.6rem;
-  color: #333;
-}
-
-.qr-img {
-  width: 200px;
-  margin: 15px auto;
-  border: 2px dashed #ff7e5f;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
 .share {
   padding: 40px 20px;
   text-align: center;
