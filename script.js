@@ -39,7 +39,6 @@ function toggleMusic() {
 window.addEventListener('DOMContentLoaded', () => {
   const slideshow = document.getElementById('slideshow');
   const images = [
-    'images/cake.jpg',
     'images/principal1.jpg',
     'images/principal2.jpg',
     'images/principal3.jpg',
