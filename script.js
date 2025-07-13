@@ -45,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     'images/principal4.jpg',
     'images/principal5.jpg',
     'images/principal6.jpg',
+    'images/principal7.jpg',
     'images/dream car.jpg'
   ];
 
